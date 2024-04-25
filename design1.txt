@@ -1,0 +1,33 @@
+First design the player class:
+
+It needs to include fields for center position, drawing position, image data, width, height, and radius.
+Function to set the draw position based off width and height for ease of use.
+Function to check if the player is off the screen.
+Reset function to move the player back to the starting position.
+
+Second design the enemy class:
+
+Same values as the player, with an additional movement array.
+The movement arrays is an array with a length of 3 that includes the movement speed, and dir in degrees and radians.
+Function to set the draw position based off width and height.
+Off-screen detection that returns a true or false value, as well as the angle of the wall the player is passed.
+move_enemy function that moves the enemy based of the direction in radians, and calculates a new bounce angle if the player is off-screen.
+Reset function to move the enemy back to the starting position.
+
+Finally, we make the treasure class:
+
+Same variables as player, but the center X and Y and set to random values within the screens dimensions.
+
+Now onto the main file / game loop:
+
+Load all of our image and audio assets, and create all necessary classes.
+Create player and enemy movement scripts.
+Create a function for collision detection:
+    Inputs for two objects.
+    Take the distance between the two objects and see if it's smaller than their radius combined.
+    Repeat for both X and Y plains.
+    Return result.
+Now in the game loop we check for collisions and change code as necessary.
+Stop and start background music based off game state.
+Draw win or lose messages depending on the value of win variable.
+Space class the objects reset variables and creates new treasures, and resets music.
